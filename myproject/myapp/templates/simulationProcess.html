@@ -1,0 +1,273 @@
+<html>
+    <head>
+        <title>Pricing Model (for Car Loan)</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        <link href='/static/custom.css' rel='stylesheet' type='text/css'>
+
+    </head>
+    <body>
+
+        <div class="container">
+        	 <div class="row">
+
+
+ 
+				</div>
+            <div class="row">
+
+
+
+                <div class="col-xl-8 offset-xl-2 py-3">
+                		<div class="float-right">
+
+							<div class="alert alert-success response" role="alert">Loan Status </div>
+			
+			 </div>
+                    <h1>Pricing Model (for Car Loan)</h1>
+                    <p class="lead">This is a demo for our Pricing Model (for Car Loan) to crafting working  price modeling  with Machine Learning and API background .</p>
+                    <br>
+                   
+                    <!-- We're going to place the form here in the next step -->
+
+
+
+
+
+<!--action="http://46.101.239.156/mlProcess"-->
+<form id="contact-form" method="get" action="#" role="form">
+<input id="ip_address" value="{{ip_address}}" type="hidden" />
+    <div class="messages"></div>
+
+    <div class="controls">
+       <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_Email">Email *</label>
+                    <input id="form_Email" type="email"  name="email" min="1" max="10000000" class="form-control" placeholder="Please enter your Email *" required="required" data-error="Email is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_org_name">org_name *</label>
+                    <input id="form_org_name" type="text" name="org_name"  class="form-control" placeholder="Please enter your org_name*" required="required" data-error="org_name is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+       <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="form_key">key *</label>
+                    <input id="form_key" type="text" name="key"  class="form-control" placeholder="Please enter your key *" required="required" data-error="key is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_Requested_Amount">Requested Amount *</label>
+                    <input id="form_Requested_Amount" type="number" name="Requested_Amount" min="1" max="10000000" class="form-control" placeholder="Please enter your Requested Amount *" required="required" data-error="Requested_Amount is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_Emi_Amount">Emi Amount *</label>
+                    <input id="form_Emi_Amount" type="number" name="Emi_Amount" min="1" max="10000000" class="form-control" placeholder="Please enter your Emi Amount*" required="required" data-error="Emi_Amount is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_Age">Age *</label>
+                    <input id="form_Age" type="number" name="Age" min="10" max="85"  class="form-control" placeholder="Please enter your Age *" required="required" data-error="Age is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_Ex_Showroom_Price">Ex_Showroom_Price *</label>
+                    <input id="form_Ex_Showroom_Price" type="number" name="Ex_Showroom_Price"  min="1" max="10000000" class="form-control" placeholder="Please enter your Ex_Showroom_Price *" required="required" data-error="Ex_Showroom_Price is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_Cost_Of_Vehicle">Cost_Of_Vehicle *</label>
+                    <input id="form_Cost_Of_Vehicle" type="number" name="Cost_Of_Vehicle"  min="1" max="10000000" class="form-control" placeholder="Please enter your Cost_Of_Vehicle *" required="required" data-error="Cost_Of_Vehicle is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+	<div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_Loan_Term">Loan_Term *</label>
+                    <input id="form_Loan_Term" type="number" name="Loan_Term" min="10" max="100"  class="form-control" placeholder="Please enter your Loan Term *" required="required" data-error="Loan Term is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_cibil_score">cibil score *</label>
+                    <input id="form_cibil_score" type="number" name="cibil_score" min="1"  max="10000000" class="form-control" placeholder="Please enter your cibil score *" required="required" data-error="cibil_score is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+	<div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_No_Of_Years_At_Residence">No_Of_Years_At_Residence *</label>
+                    <input id="form_No_Of_Years_At_Residence" type="number" name="No_Of_Years_At_Residence"  min="1" max="100" class="form-control" placeholder="Please enter your No_Of_Years_At_Residence *" required="required" data-error="No_Of_Years_At_Residence is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+
+
+	<div class="row">
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_No_Of_Years_In_City">No_Of_Years_In_City *</label>
+                    <input id="form_No_Of_Years_In_City" type="number" name="No_Of_Years_In_City"  min="1" max="10000000" class="form-control" placeholder="Please enter your No_Of_Years_In_City *" required="required" data-error="No_Of_Years_In_City is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+	<div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_year">year *</label>
+                    <input id="form_year" type="number" name="year" min="10" max="10000" class="form-control" placeholder="Please enter year *" required="required" data-error="year is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
+		<div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_Segment">Please specify your Segment *</label>
+                    <select id="form_Segment" name="Segment" onchange="" class="form-control" required="required" data-error="Please specify your Segment.">
+                        <option value=""></option>
+                        <option value="A1">A1</option>
+                        <option value="A2">A2</option>
+                        <option value="A3">A3</option>
+                        <option value="A4">A4</option>
+                        <option value="A5">A5</option>
+                        <option value="A6">A6</option>
+                        <option value="SUV" selected="selected" >SUV</option>
+                        <option value="MUV">MUV</option>
+                        <option value="EXTRA1">EXTRA1</option>
+                    </select>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+		<div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_Gender">Please specify your Gender *</label>
+                    <select id="form_Gender" name="Gender" class="form-control" required="required" data-error="Please specify your Gender.">
+                        <option value=""></option>
+                        <option value="Male" selected="selected" >Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+         <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_max_loan_term_in_months">max_loan_term_in_months *</label>
+                    <input id="form_max_loan_term_in_months" type="number" value='0' name="max_loan_term_in_months" min="0" max="60" class="form-control" placeholder="Please enter your max_loan_term_in_months *" required="required" data-error="max_loan_term_in_months is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+	<div class="col-md-6">
+        <label for="form_max_loan_term_in_months">Select Country Status *</label>
+        <select id="country_status" name="country_status" onchange="" class="form-control" required="required" data-error="Please specify your country_status.">
+           
+            <option value="1">Normal</option>
+            <option value="2">Restricted</option>
+            <option value="3">Growing</option>
+
+        </select>
+            </div>
+        </div>
+	</div>
+
+    <div class="row">
+        <div class="col-md-6">
+               <div class="form-group" id="showCheckBox" style="display: none;">
+                   <label for="form_max_loan_term_in_months">CheckBox Below and send Request Again to save it on DB *</label>
+                   <input type="checkbox" name="saveToDb" id="saveToDb" value="1" />
+                   <label for="form_max_loan_term_in_months">leave Approved IRR blank if no change on Recommended Value</label>
+                   <input type="text" name="approvedIRR" id="approvedIRR" placeholder="Approved IRR value" />
+                   <div class="help-block with-errors"></div>
+               </div>
+           </div>
+
+   </div>
+
+        <div class="row">
+            <div class="col-md-12">
+
+            </div>
+            <div class="col-md-6">
+                <input type="button" id="send" class="btn btn-success btn-send" value="Send Request" >
+            </div>
+            <div class="col-md-6" id="responseAreaImage" style="display:none;position: relative;top:-28px">
+               <img src="/static/loading.gif" width="125px" height="125px"  />
+            </div>
+            <div class="col-md-6" id="responseArea" style="display:none;position: relative;">
+                
+             </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-muted">
+                    <strong>*</strong> All fields are required.</p>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js" integrity="sha256-dHf/YjH1A4tewEsKUSmNnV05DDbfGN3g7NMq86xgGh8=" crossorigin="anonymous"></script>
+<script src="/static/contact.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+   
+   <body>
+      Hello World!!!<p>Today is {{today}} {{md}}</p>
+      we are 
+      {%  if today.day == 1 %}
+      first day of month 
+      {% elif today.day == 30 %}
+      end of month
+      {%endif%}
+      {% for i in daysOfWeek %}
+      {{i}}
+      {% endfor  %}
+
+   </body>
+   
+</html>

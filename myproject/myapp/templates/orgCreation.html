@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Create Organization Demo</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">SWT-Pricing Model</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/landing">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/services">Services</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/checkOrgData">Check Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/checkDataDescription">Data Description</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">Smart Web Technology Services</h1>
+        <p class="lead">Organization Demo Creation</p>
+        <ul class="list-unstyled">
+        </ul>
+      </div>
+    </div>
+        <div class="card" style="margin-bottom: 10px;">
+            <div class="card-header">
+                Organization Info
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{org_name}}</h5>
+                <p class="card-text">
+                    Welcome to Data Science Tetsing Demo, all Links Above is Related to your DataSet.
+                </p>
+            </div>
+        </div>
+        <div class="card" style="margin-bottom: 10px;">
+            <div class="card-header">
+               DataSet Reult
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">DataSet Info</h5>
+                <p class="card-text">
+                   {{alreadyExist}}, You can requst Demo Any time and use your Organization Name Always.....
+                </p>
+                <p class="card-text">
+                    You can requst Demo Any time and use your Organization Name Always.....totalRecords
+                 </p> 
+                 <p class="card-text" style="color:red">
+                   Total Inserted Records is {{totalRecords}}
+                 </p> 
+            </div>
+        </div>
+
+        <div class="card" style="margin-bottom: 10px;">
+            <div class="card-header">
+               DataSet Sample
+            </div>
+            <div class="card-body">
+                Click on Check your Data any time to see sample of Records....
+            </div>
+        </div>
+
+  </div> 
+  
+
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-bottom">
+
+    <div class="container">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void()">&copy;Rights Reserved for Smart Web Technology {{year}}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </nav>
+  <!-- Bootstrap core JavaScript -->
+  <script src="/static/vendor/jquery/jquery.slim.min.js"></script>
+  <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

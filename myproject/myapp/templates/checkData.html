@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Create Organization Demo</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">SWT-Pricing Model</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/landing">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/services">Services</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/checkOrgData">Check Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/checkDataDescription">Data Description</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">Smart Web Technology Services</h1>
+        <p class="lead">Organization Demo Creation</p>
+        <ul class="list-unstyled">
+        </ul>
+      </div>
+    </div>
+        <div class="card" style="margin-bottom: 10px;">
+            <div class="card-header">
+                Organization Info
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{org_name}} </h5>
+                <p class="card-text">
+                    Welcome to Data Science Tetsing Demo, all Links Above is Related to your DataSet.
+                </p>
+            </div>
+        </div>
+        <div class="card" style="margin-bottom: 10px;">
+          <div class="card-header">
+             API Connectivity 
+          </div>
+          <div class="card-body">
+              <h5 class="card-title">Below API give you the ability to test and try your ML result and compare it with your real descions</h5>
+              <a href="javascript:void()"><p class="card-text" style="font-style: italic;font-size: 14px;">
+               {{apiUrl}}
+              </p></a>
+              <p>Json Response as {{responseRequest}}</p>
+              <p>Email is {{email}}</p>
+              <p>Key is {{key}} </p>
+              <p>Check API Full Description click <a target="_blank" href="{{apiDescriptionUrl}}">here..</a></p>
+          </div>
+      </div>
+        {% if data %}
+
+        <div class="card" style="margin-bottom: 10px;">
+          <div class="card-header">
+              Organization Info
+          </div>
+          <div class="card-body">
+              <h5 class="card-title">Total Transactions Found in dataset <span  style="color:red">{{count}}</span></h5>
+              <p class="card-text">
+                  
+              </p>
+          </div>
+      </div>
+      <div class="card" style="overflow:scroll;margin-bottom: 10px;">
+                <table class="table" style="overflow:scroll">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                          {% for l in defaultAttributesML %}
+                            <th scope="col">{{l}}</th>
+                          {% endfor %}
+                      </tr>
+                    </thead>
+                    <tbody>
+                    {% for i in data %}
+                    <tr><td>{{ i.ID }}</td>
+                        <td>{{ i.Requested_Amount }}</td>
+                        <td>{{ i.Emi_Amount }}</td>
+                        <td>{{ i.Age }}</td>
+                        <td>{{ i.Segment }}</td>
+                        <td>{{ i.Ex_Showroom_Price }}</td>
+                        <td>{{ i.Cost_Of_Vehicle }}</td>
+                        
+                        <td>{{ i.Loan_Term }}</td>
+                        <td>{{ i.cibil_score }}</td>
+                        <td>{{ i.No_Of_Years_At_Residence }}</td>
+                        <td>{{ i.No_Of_Years_In_City }}</td>
+                        <td>{{ i.application_creation_date }}</td>
+                        <td>{{ i.Disbursed }}</td>
+                        <td>{{ i.Gender_Desc }}</td>
+                        <td>{{ i.IRR }}</td>
+
+                    </tr>
+                    {% endfor  %}
+                </tbody>
+                    </table>
+                  </div>
+                    {% else %}
+                      <div class="card" style="margin-bottom: 10px;">
+                        <div class="card-header">
+                            Organization Info
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Start Seeing your Data by Request demo from Service Page</h5>
+                            <p class="card-text">
+                                
+                            </p>
+                        </div>
+                    </div>
+                    {% endif %}
+      
+                    {% if dataEDA %}
+
+                    <div class="card" style="margin-bottom: 10px;">
+                      <div class="card-header">
+                          Organization Info
+                      </div>
+                      <div class="card-body">
+                          <h5 class="card-title">Total Transactions After EDA in dataset <span  style="color:red">{{countEDA}}</span>
+                              <span  style="color:red">We are ready for ML <img width="120px" height="120px" src="/static/download.png" /> </span></h5>
+                          <p class="card-text">
+                              
+                          </p>
+                      </div>
+                  </div>
+                  <div class="card" style="overflow:scroll;margin-bottom: 10px;">
+                    <table class="table" style="overflow:scroll">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                              {% for l in defaultAttributesMLEDA %}
+                                <th scope="col">{{l}}</th>
+                              {% endfor %}
+                          </tr>
+                        </thead>
+                        <tbody>
+                        {% for i in dataEDA %}
+                        <tr><td>{{ i.ID }}</td>
+                            <td>{{ i.Requested_Amount }}</td>
+                            <td>{{ i.Emi_Amount }}</td>
+                            <td>{{ i.Age }}</td>
+                            
+                            <td>{{ i.Ex_Showroom_Price }}</td>
+                            <td>{{ i.Cost_Of_Vehicle }}</td>
+                            
+                            <td>{{ i.Loan_Term }}</td>
+                            <td>{{ i.cibil_score }}</td>
+                            <td>{{ i.No_Of_Years_At_Residence }}</td>
+                            <td>{{ i.No_Of_Years_In_City }}</td>
+                            <td>{{ i.year }}</td>
+                            <td>{{ i.A1 }}</td>
+                            <td>{{ i.A2 }}</td>
+                            <td>{{ i.A3 }}</td>
+                            <td>{{ i.A4 }}</td>
+                            <td>{{ i.A5 }}</td>
+                            <td>{{ i.A6 }}</td>
+                            <td>{{ i.EXTRA1 }}</td>
+                            <td>{{ i.MUV }}</td>
+                            <td>{{ i.SUV }}</td>
+                            
+                            <td>{{ i.Yes }}</td>
+                            <td>{{ i.Male }}</td>
+                            
+
+                            <td>{{ i.Gender_Desc }}</td>
+                            
+    
+                        </tr>
+                        {% endfor  %}
+                    </tbody>
+                        </table>
+                      </div>
+                  {% endif %}
+
+  </div> 
+  
+
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/static/vendor/jquery/jquery.slim.min.js"></script>
+  <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

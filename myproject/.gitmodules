@@ -1,0 +1,3 @@
+[submodule "pricingModel"]
+	path = pricingModel
+	url = https://github.com/mohdsh85/pricingModels.git
